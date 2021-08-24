@@ -15,7 +15,7 @@ RUN apt-get -qq install -y \
     opus-tools
 
 # Git clone repository + root 
-RUN git clone https://github.com/Codex51/Codex.git /usr/src/usercodex
+RUN git clone https://github.com/aryazakaria01/Codex.git /usr/src/usercodex
 WORKDIR /usr/src/usercodex
 ENV PATH="/usr/src/usercodex/bin:$PATH"
 
