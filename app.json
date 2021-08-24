@@ -1,0 +1,113 @@
+{
+  "name": "CODEX",
+  "description": "A simple Telegram userbot based on Telethon.",
+  "logo": "https://telegra.ph/file/3aaf9215b5f9e1ebb8144.jpg",
+  "keywords": [
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/Codex51/Codex/",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "env": {
+    "ALIVE_NAME": {
+      "description": "give your name",
+      "value": "your name",
+      "required": false
+    },
+    "APP_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Get this value by running python3 in resources/stringsession/string_session.py locally or https://generatestringsession.KENZO404.repl.run",
+      "value": "telethon string season",
+      "required": true
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
+      "required": true
+    },
+    "COMMAND_HAND_LER": {
+      "description": "Set this one with only one the symbol to use it before your command to run like . , ' `",
+      "value": ".",
+      "required": false
+    },
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
+      "value": "ANYTHING",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Required for updating the bot and other stuff get it from https://dashboard.heroku.com/account",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "YOUR app name ",
+      "value": "your first name app above choose a region",
+      "required": true
+    },
+    "TZ": {
+      "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
+      "value": "Asia/Jakarta",
+      "required": false
+    },
+    "UPSTREAM_REPO": {
+      "description": "if you need custom deploy then type your git repo link example : https://github.com/....../....",
+      "value": "Codex",
+      "required": false
+    },
+    "API_ID": {
+      "description": "Your APP_ID.",
+      "required": true
+    },
+    "SESSION_STRING": {
+      "description": "Session String, for music. (Pyrogram)",
+      "required": true
+    },
+    "ARQ_API_KEY": {
+      "description": "Get this from @ARQRobot.",
+      "required": true
+    },
+    "DEFAULT_SERVICE": {
+      "description": "Must be one of youtube/saavn.",
+      "value": "youtube",
+      "required": true
+    },
+    "CHAT_ID": {
+      "description": "Chat ID Group, for sudo.",
+      "required": true
+    },
+    "BITRATE": {
+      "description": "Must be 512/320.",
+      "value": "512",
+      "required": true
+    }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "13"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "heroku/python"
+  }]
+}
